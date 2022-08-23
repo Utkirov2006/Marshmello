@@ -1,0 +1,387 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  background: url(./img/fon.png) no-repeat;
+  background-size: cover;
+}
+
+.navbar {
+  width: 100%;
+  height: 10vh;
+
+}
+
+.navbar ul {
+  display: flex;
+  width: 79%;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  list-style: none;
+  position: absolute;
+  z-index: 9;
+}
+
+.navbar .logo {
+  width: 100px;
+  height: 60px;
+  background-image: url(./img/marshmello-logo-EFA4343A0B-seeklogo.com.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-top: 1rem;
+}
+
+.navbar .toggle-icon {
+  display: none;
+}
+
+li a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+}
+
+.activ {
+  background: white;
+  color: black;
+  padding: 8px 12px;
+  box-shadow: 0 -1px 15px silver;
+  text-decoration: none;
+}
+
+.img2 {
+  width: 35%;
+  height: 100vh;
+  top: 0rem;
+  background-image: url(/src/img/marshmello.png);
+  background-position: right;
+  width: 100;
+  background-size: contain;
+  position: absolute;
+  right: 0%;
+  background-repeat: no-repeat;
+
+}
+
+/* home start */
+
+.home {
+  height: 74vh;
+}
+
+.home button {
+  width: 118px;
+  height: 50px;
+  margin-left: 5rem;
+}
+
+.home .h3 {
+  margin: 70px;
+}
+
+.home .h4 {
+  line-height: 34px;
+  margin: 70px;
+}
+
+/* home end */
+
+
+
+/* upcoming-show */
+.upcoming-show {
+  height: 83.5vh;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.shop {
+  margin: 10px;
+  width: 360px;
+  height: 300px;
+}
+
+.shop .shopImg {
+  width: 100%;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);  */
+}
+
+/* media start */
+
+.media {
+  height: 83.5vh;
+
+}
+
+.player {
+  margin: 10px;
+  width: 359px;
+  height: 280px;
+}
+
+/* songs start */
+
+.songs {
+  height: 83.5vh;
+}
+
+.songs .table {
+  width: 65%;
+  margin-left: 4rem;
+  color: white;
+}
+
+.songs-logo {
+  width: 35%;
+  height: 100vh;
+  top: 0rem;
+  background-image: url(/src/img/mellogang.png);
+  background-position: right;
+  width: 100;
+  background-size: contain;
+  position: absolute;
+  right: 0%;
+  background-repeat: no-repeat;
+
+}
+
+/* songs end */
+
+/* account start? */
+
+
+.account {
+  height: 83.5vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.account .h1 {
+  position: relative;
+  top: 11%;
+  font-size: 48px;
+  margin-left: 9rem;
+  text-align: center;
+  color: white;
+}
+
+.marsh-account {
+  width: 44%;
+  height: 100vh;
+  background-image: url(/src/img/marshmello-account.png);
+  background-position: center;
+  width: 100;
+  background-size: cover;
+  margin-top: -7rem;
+
+}
+
+.account-card {
+  width: 420px;
+  height: auto;
+  background-color: azure;
+  margin-top: 4rem;
+}
+
+.account-card .form-group {
+  width: 90%;
+  margin: 17px;
+}
+
+.account-card .account_h2 {
+  text-align: center;
+}
+
+.account-card .input-account {
+  width: 100%;
+  padding: 6px;
+}
+
+.account button {
+  width: 118px;
+  height: 50px;
+  margin: 8px;
+}
+
+/* account end */
+
+tr img {
+  width: 100px;
+  height: 90px;
+}
+
+.footer {
+  position: absolute;
+  background: rgb(251, 216, 21);
+  background: linear-gradient(330deg, rgba(255, 0, 58, 1) 56.4%, rgba(251, 216, 21, 1) 55%);
+  width: 100%;
+}
+
+.footer-fluid {
+  justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+  height: 6.5vh;
+
+}
+
+
+@media (max-width:576px) {
+  .navbar {
+    position: relative;
+    transition: 0.5s height ease-in-out;
+  }
+
+  .navbar.expanded {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .navbar.expanded ul {
+    position: absolute;
+    top: 129px;
+    left: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+
+  }
+
+  .navbar.expanded ul li {
+    margin: 15px 0;
+    font-size: 24px;
+  }
+
+  .navbar.expanded ul a {
+    margin: 15px 0;
+    font-size: 24px;
+  }
+
+  .navbar .logo {
+    display: none;
+  }
+
+  .navbar .toggle-icon {
+    color: #fff;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .home {
+    height: auto;
+  }
+
+  button {
+    width: 90px;
+    margin-left: 4rem;
+  }
+
+  .img2 {
+    position: relative;
+    width: 100%;
+
+  }
+
+  .media {
+    height: auto;
+
+  }
+
+  .media .media_block iframe {
+    width: 100%;
+    margin: 0px;
+    padding: 10px;
+  }
+
+  /* songs start? */
+  .songs {
+    height: auto;
+  }
+
+  .songs .table {
+    width: 100%;
+    margin-left: 0rem;
+  }
+
+  .songs-logo {
+    display: none;
+  }
+
+  .songs-responsive {
+    overflow-y: scroll;
+  }
+
+  /* songs end? */
+
+  tr :nth-child(4) {
+    display: none;
+  }
+
+  tr :nth-child(5) {
+    display: none;
+  }
+
+  /* account start */
+  .account {
+    height: auto;
+    flex-direction: column;
+    display: block;
+  }
+
+  .account-card {
+    width: auto;
+    height: auto;
+    background-color: azure;
+    margin-top: 0rem;
+  }
+
+
+  .marsh-account {
+    width: 100%;
+  }
+
+  .account .h1 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  /* account-end */
+
+  .footer-fluid {
+    height: 100vh;
+    flex-direction: column;
+
+  }
+
+}
